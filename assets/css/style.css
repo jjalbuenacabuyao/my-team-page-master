@@ -63,7 +63,7 @@
 }
 
 .person__role {
-  @apply font-pt uppercase text-xxs col-start-2;
+  @apply font-pt uppercase text-xxs col-start-2 2xl:text-xs;
   writing-mode: vertical-lr;
 }
 
@@ -72,5 +72,5 @@
 }
 
 .person__name {
-  @apply font-fw-600 text-sm col-span-2 mt-3;
+  @apply font-fw-600 text-sm col-span-2 mt-3 2xl:text-lg;
 }
