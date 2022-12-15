@@ -68,7 +68,7 @@
 }
 
 .person__img {
-  @apply row-start-1 w-full max-w-xs;
+  @apply row-start-1 w-full;
 }
 
 .person__name {
