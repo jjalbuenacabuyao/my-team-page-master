@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply flex flex-col m-auto gap-9 md:max-w-2xl md:w-full lg:max-w-3xl lg:grid lg:grid-cols-2 lg:gap-y-24 2xl:max-w-7xl;
+}
+
+.bill {
+  grid-area: bill;
+}
+
+.saba {
+  grid-area: saba;
+}
+
+.shae {
+  grid-area: shae;
+}
+
+.skylah {
+  grid-area: skylah;
+}
+
+.griff {
+  grid-area: griff;
+}
+
+.stan {
+  grid-area: stan;
+}
+
+.gallery {
+  @apply grid grid-cols-2 grid-rows-layout gap-x-6 gap-y-4 lg:gap-x-12 lg:col-span-2;
+  grid-template-areas: 
+  "bill ." 
+  ". saba" 
+  "shae ." 
+  ". skylah" 
+  "griff ." 
+  ". stan";
+}
+
+@media screen and (min-width: 64em) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 3rem auto 3rem);
+    grid-template-areas: 
+      "bill . shae"
+      "bill saba shae"
+      ". saba ."
+      "skylah . stan"
+      "skylah griff stan"
+      ". griff ."
+    ; 
+  }
+}
+
+.gallery__person {
+  @apply grid;
+  grid-template-columns: auto min-content;
+  grid-template-rows: min-content;
+}
+
+.person__role {
+  @apply font-pt uppercase text-xxs col-start-2;
+  writing-mode: vertical-lr;
+}
+
+.person__img {
+  @apply row-start-1 w-full max-w-xs;
+}
+
+.person__name {
+  @apply font-fw-600 text-sm col-span-2 mt-3;
+}
