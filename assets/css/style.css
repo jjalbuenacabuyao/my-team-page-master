@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .container {
-  @apply flex flex-col m-auto gap-9 md:max-w-2xl md:w-full lg:max-w-3xl lg:grid lg:grid-cols-2 lg:gap-y-24 2xl:max-w-7xl;
+  @apply m-auto flex flex-col gap-9 md:w-full md:max-w-2xl lg:grid lg:max-w-3xl lg:grid-cols-2 lg:gap-y-24 2xl:max-w-7xl;
 }
 
 .bill {
@@ -31,28 +31,27 @@
 }
 
 .gallery {
-  @apply grid grid-cols-2 grid-rows-layout gap-x-6 gap-y-4 lg:gap-x-12 lg:col-span-2 2xl:gap-x-24;
-  grid-template-areas: 
-  "bill ." 
-  ". saba" 
-  "shae ." 
-  ". skylah" 
-  "griff ." 
-  ". stan";
+  @apply grid grid-cols-2 grid-rows-layout gap-x-6 gap-y-4 lg:col-span-2 lg:gap-x-12 2xl:gap-x-24;
+  grid-template-areas:
+    "bill ."
+    ". saba"
+    "shae ."
+    ". skylah"
+    "griff ."
+    ". stan";
 }
 
 @media screen and (min-width: 64em) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 3rem auto 3rem);
-    grid-template-areas: 
+    grid-template-areas:
       "bill . shae"
       "bill saba shae"
       ". saba ."
       "skylah . stan"
       "skylah griff stan"
-      ". griff ."
-    ; 
+      ". griff .";
   }
 }
 
@@ -69,7 +68,7 @@
 }
 
 .person__role {
-  @apply font-pt uppercase text-xxs col-start-2 2xl:text-xs;
+  @apply col-start-2 font-pt text-xxs uppercase 2xl:text-xs;
   writing-mode: vertical-lr;
 }
 
@@ -78,5 +77,5 @@
 }
 
 .person__name {
-  @apply font-fw-600 text-sm col-span-2 mt-3 2xl:text-lg;
+  @apply col-span-2 mt-3 text-sm font-fw-600 2xl:text-lg;
 }
